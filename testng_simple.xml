@@ -4,15 +4,13 @@
 	<listeners>
 		<listener class-name="utils.TestNgListener" />
 	</listeners>
-	
-
-    <test name="123" >
+	    <parameter name="browser" value="edge" />
         <parameter name="appURL" value="http://keyfood.ro" />
         <parameter name="user" value="customer" />
         <parameter name="user2" value="customer2" />
         <parameter name="pass" value="customer@123" />
         
-        
+    <test name="123" >
         <classes>
             <class name="tests.LoginTest" >
             </class>  

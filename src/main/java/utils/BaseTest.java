@@ -23,16 +23,18 @@ import com.google.common.io.Files;
 
 import pages.BasePage;
 
-public class BaseTest {
+public class BaseTest extends Driver{
 	
-	public static WebDriver driver;
+	public WebDriver driver;
 	public BasePage app;
 	
-	@Parameters({"appURL"})
+	@Parameters({"appURL", "browser"})
 	@BeforeClass(alwaysRun = true)
-	public void setup(String url) {
+	public void setup(String url, String browser) {
 		//System.setProperty("webdriber.chrome.driver", "path//chromedriver.exe")	
-		driver =  new ChromeDriver();
+		//driver =  new ChromeDriver();
+		driver = initDriver(browser);
+		
 		driver.manage().window().maximize();//face maximize la browser
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 

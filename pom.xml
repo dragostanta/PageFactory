@@ -3,11 +3,12 @@
   <groupId>PageFactory</groupId>
   <artifactId>PageFactory</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
-    <properties>
+  <!--  
+  <properties>
      <maven.compiler.source>1.8</maven.compiler.source>
      <maven.compiler.target>1.8</maven.compiler.target>
  </properties>
+ -->
   
   
   <dependencies>
@@ -16,7 +17,7 @@
 	    <groupId >org.testng</groupId>
 	    <artifactId>testng</artifactId>
 	    <version>7.8.0</version>
-	    <scope>test</scope>
+	    <scope>compile</scope>
 	</dependency>
 	  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
@@ -38,6 +39,7 @@
 	</dependency>
 	
   </dependencies> 
+ 
    <profiles>
   <profile>
     <id>doclint-java8-disable</id>
